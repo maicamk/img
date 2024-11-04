@@ -469,13 +469,13 @@ export default function Home() {
       case 'admin':
         return (
           <Link href="/admin">
-            <LoginButton>管理</LoginButton>
+            <LoginButton>đăng nhập</LoginButton>
           </Link>
         );
       default:
         return (
           <Link href="/login">
-            <LoginButton>登录</LoginButton>
+            <LoginButton>Đăng nhập</LoginButton>
           </Link>
         );
     }
@@ -485,21 +485,21 @@ export default function Home() {
   return (
     <main className=" overflow-auto h-full flex w-full min-h-screen flex-col items-center justify-between">
       <header className="fixed top-0 h-[50px] left-0 w-full border-b bg-white flex z-50 justify-center items-center">
-        <nav className="flex justify-between items-center w-full max-w-4xl px-4">图床</nav>
+        <nav className="flex justify-between items-center w-full max-w-4xl px-4">Image hosting</nav>
         {renderButton()}
       </header>
       <div className="mt-[60px] w-9/10 sm:w-9/10 md:w-9/10 lg:w-9/10 xl:w-3/5 2xl:w-2/3">
 
         <div className="flex flex-row">
           <div className="flex flex-col">
-            <div className="text-gray-800 text-lg">图片或视频上传
+            <div className="text-gray-800 text-lg">Tải lên hình ảnh hoặc video
             </div>
             <div className="mb-4 text-sm text-gray-500">
-              上传文件最大 5 MB;本站已托管 <span className="text-cyan-600">{Total}</span> 张图片; 你访问本站的IP是：<span className="text-cyan-600">{IP}</span>
+              Chỉ chấp nhận file có dung lượng tối đa là 5 MB; Đã có tổng số <span className="text-cyan-600">{Total}</span> file được upload; IP của bạn：<span className="text-cyan-600">{IP}</span>
             </div>
           </div>
-          <div className="flex  flex-col sm:flex-col   md:w-auto lg:flex-row xl:flex-row  2xl:flex-row  mx-auto items-center  ">
-            <span className=" text-lg sm:text-sm   md:text-sm lg:text-xl xl:text-xl  2xl:text-xl">上传接口：</span>
+          <div className="flex d-none flex-col sm:flex-col   md:w-auto lg:flex-row xl:flex-row  2xl:flex-row  mx-auto items-center  ">
+            <span className=" text-lg sm:text-sm   md:text-sm lg:text-xl xl:text-xl  2xl:text-xl">Kênh upload：</span>
             <select
               value={selectedOption} // 将选择框的值绑定到状态中的 selectedOption
               onChange={handleSelectChange} // 当选择框的值发生变化时触发 handleSelectChange 函数
