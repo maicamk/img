@@ -577,8 +577,7 @@ export default function Home() {
               <div className="absolute -z-10 left-0 top-0 w-full h-full flex items-center justify-center">
 
                 <div className="text-gray-500">
-
-                  拖拽文件到这里或将屏幕截图复制并粘贴到此处上传
+                  Kéo thả file vào đây hoặc dán ảnh chụp màn hình để upload.
                 </div>
               </div>
             )}
@@ -592,7 +591,7 @@ export default function Home() {
               className="w-full h-10 bg-blue-500 cursor-pointer flex items-center justify-center text-white"
             >
               <FontAwesomeIcon icon={faImages} style={{ width: '20px', height: '20px' }} className="mr-2" />
-              选择图片
+              Chọn ảnh
             </label>
             <input
               id="file-upload"
@@ -604,7 +603,7 @@ export default function Home() {
           </div>
           <div className="md:col-span-5 col-span-8">
             <div className="w-full h-10 bg-slate-200 leading-10 px-4 text-center md:text-left">
-              已选择 {selectedFiles.length} 张，共 {getTotalSizeInMB(selectedFiles)} M
+              đã chọn {selectedFiles.length}，tổng {getTotalSizeInMB(selectedFiles)} M
             </div>
           </div>
           <div className="md:col-span-1 col-span-3">
@@ -613,7 +612,7 @@ export default function Home() {
               onClick={handleClear}
             >
               <FontAwesomeIcon icon={faTrashAlt} style={{ width: '20px', height: '20px' }} className="mr-2" />
-              清除
+              Xóa
             </div>
           </div>
           <div className="md:col-span-1 col-span-5">
@@ -624,7 +623,7 @@ export default function Home() {
               onClick={() => handleUpload()}
             >
               <FontAwesomeIcon icon={faUpload} style={{ width: '20px', height: '20px' }} className="mr-2" />
-              上传
+              Upload
             </div>
           </div>
         </div>
