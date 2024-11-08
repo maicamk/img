@@ -459,13 +459,13 @@ export default function Home() {
     if (!isAuthapi) {
       return (
         <Link href="/login">
-          <LoginButton>登录</LoginButton>
+          <LoginButton>Đăng nhập</LoginButton>
         </Link>
       );
     }
     switch (Loginuser) {
       case 'user':
-        return <LoginButton onClick={handleSignOut}>登出</LoginButton>;
+        return <LoginButton onClick={handleSignOut}>Thoát</LoginButton>;
       case 'admin':
         return (
           <Link href="/admin">
@@ -485,8 +485,7 @@ export default function Home() {
   return (
     <main className=" overflow-auto h-full flex w-full min-h-screen flex-col items-center justify-between">
       <header className="fixed top-0 h-[50px] left-0 w-full border-b bg-white flex z-50 justify-center items-center">
-        <nav className="flex justify-between items-center w-full max-w-4xl px-4">Image hosting</nav>
-        {renderButton()}
+        <a href="https://bangtra.com"><img src="../public/img/logo-bangtra.png" alt="Bảng Tra Community" /></a><nav className="flex justify-between items-center w-full max-w-4xl px-4">Image hosting</nav>
       </header>
       <div className="mt-[60px] w-9/10 sm:w-9/10 md:w-9/10 lg:w-9/10 xl:w-3/5 2xl:w-2/3">
 
@@ -498,11 +497,11 @@ export default function Home() {
               Chỉ chấp nhận file có dung lượng tối đa là 5 MB; Đã có tổng số <span className="text-cyan-600">{Total}</span> file được upload; IP của bạn：<span className="text-cyan-600">{IP}</span>
             </div>
           </div>
-          <div className="flex d-none flex-col sm:flex-col   md:w-auto lg:flex-row xl:flex-row  2xl:flex-row  mx-auto items-center  ">
+          <div className="flex hidden flex-col sm:flex-col  md:w-auto lg:flex-row xl:flex-row  2xl:flex-row  mx-auto items-center  ">
             <span className=" text-lg sm:text-sm   md:text-sm lg:text-xl xl:text-xl  2xl:text-xl">Kênh upload：</span>
             <select
-              value={selectedOption} // 将选择框的值绑定到状态中的 selectedOption
-              onChange={handleSelectChange} // 当选择框的值发生变化时触发 handleSelectChange 函数
+              value={selectedOption}
+              onChange={handleSelectChange}
               className="text-lg p-2 border  rounded text-center w-auto sm:w-auto md:w-auto lg:w-auto xl:w-auto  2xl:w-36">
               <option value="tg" >TG(会失效)</option>
               <option value="tgchannel">TG_Channel</option>
@@ -591,7 +590,7 @@ export default function Home() {
               className="w-full h-10 bg-blue-500 cursor-pointer flex items-center justify-center text-white"
             >
               <FontAwesomeIcon icon={faImages} style={{ width: '20px', height: '20px' }} className="mr-2" />
-              Chọn ảnh
+              Chọn
             </label>
             <input
               id="file-upload"
